@@ -1,0 +1,13 @@
+#!/bin/bash
+
+sudo cp ~/pat_tools/pat-tools.py /usr/local/bin
+
+sudo mv /usr/local/bin/pat-tools.py /usr/local/bin/pat-tools
+
+sudo chmod +x /usr/local/bin/pat-tools
+
+[ ! -d "/usr/local/bin/lists" ] && sudo mkdir /usr/local/bin/lists
+
+sudo find /usr/local/bin/lists -type d -exec chmod 755 {} \;
+
+sudo chmod 777 /usr/local/bin/lists
