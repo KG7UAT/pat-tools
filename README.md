@@ -41,3 +41,7 @@ CD into the directory:
  Make sure to replace `[list-name]` with the actual name of your list. So for example, if you created a list named `base`, you would use the command `pat-tools connect base`
  
  Pat-tools is still under development and there's a lot I want to do. Some of the code definitely needs to be rewritten as there are better ways, nevertheless it works for now. In the future I want to add a GUI and maybe move pat-tools over to C/C++ for faster, more efficient execution.
+
+73,
+
+KG7UAT
