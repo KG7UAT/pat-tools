@@ -12,7 +12,7 @@ First pull the software from the repository:
 
 CD into the directory:
 
- `cd pat_tools`
+ `cd pat-tools`
  
  Install:
  
