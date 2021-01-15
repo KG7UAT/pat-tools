@@ -8,7 +8,7 @@ Pat-tools is a new program I've developed and there is still alot that needs to 
 
 First pull the software from the repository:
 
-`git pull https://github.com/KG7UAT/pat-tools.git`
+`git clone https://github.com/KG7UAT/pat-tools.git`
 
 CD into the directory:
 
@@ -17,6 +17,8 @@ CD into the directory:
  Install:
  
  `./install`
+ 
+ To update, run `git pull` and run the install command again.
  
  That's it!
  
