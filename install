@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo cp ~/pat_tools/pat-tools.py /usr/local/bin
+sudo cp ~/pat-tools/pat-tools.py /usr/local/bin
 
 sudo mv /usr/local/bin/pat-tools.py /usr/local/bin/pat-tools
 
