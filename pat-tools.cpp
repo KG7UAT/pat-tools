@@ -337,24 +337,24 @@ int main(int argc, char *argv[]) {
 						c >> x;
 
 						if ((x <= maxFreq) && (x >= minFreq)) {
-							cout << num << ". " << arr[0] << "	@	" << arr[1] << endl;
+							num += 1;
+
+							cout << num << ". " << arr[0] << " @ " << arr[1] << endl;
 
 							string slash = "/";
 
 							string cmd = exec(("pat connect ardop:" + slash + slash + slash + arr[0] + "?freq=" + arr[1]).c_str());
 							if (cmd.find("Unable to establish connection to remote") != std::string::npos) {
-								cout << "Connection failed to " << arr[0] << endl;
+								cout << "Connection failed to " << arr[0] << endl << endl;
 
 							} else {
-								cout << "Connection succeeded to " << arr[0] << endl;
+								cout << "Connection succeeded to " << arr[0] << endl << endl;
 
 								ofstream list("/usr/local/bin/lists/" + args[2] + ".list", ios_base::app | ios_base::out);
-								list << arr[0] << "," << arr[1] << endl << endl;;
+								list << arr[0] << "," << arr[1];
 							}
 						}
 					}
-
-					num += 1;
 				}
 			}
 		}
