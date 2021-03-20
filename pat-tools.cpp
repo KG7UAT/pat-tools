@@ -282,9 +282,10 @@ int main(int argc, char *argv[]) {
 		}
 	} else if (args[1] == "compile-list") {
 		string bands[12][3] = {{"1800", "2000", "160m"}, {"3500", "4000", "80m"}, {"7000", "7300", "40m"}, {"10100", "10150", "30m"}, {"14000", "14350", "20m"}, {"18068", "18168", "17m"}, {"21000", "21450", "15m"}, {"24890", "24990", "12m"}, {"28000", "29700", "10m"}, {"50000", "54000","6m"}, {"144000", "148000", "2m"}, {"420000", "450000", "70cm"}};
-		char letters[4] = {'A', 'K', 'N', 'W'};
+		char letters[5] = {'A', 'K', 'N', 'W', 'V'};
 		int num = 0;
 		string homeDir = getenv("HOME");
+		system("cd ~/pat-tools && rm stations.txt");
 		system(("pat rmslist -m ardop >> " + homeDir + "/pat-tools/stations.txt").c_str());
 
 		int minFreq;
@@ -351,17 +352,15 @@ int main(int argc, char *argv[]) {
 								cout << "Connection succeeded to " << arr[0] << endl << endl;
 
 								ofstream list("/usr/local/bin/lists/" + args[2] + ".list", ios_base::app | ios_base::out);
-								list << arr[0] << "," << arr[1];
+								list << arr[0] << "," << arr[1] << endl;
 							}
 						}
 					}
 				}
 			}
 		}
-
-		system("cd ~/pat-tools && rm stations.txt");
 	} else if (args[1] == "version") {
-		cout << "Version 0.2" << endl;
+		cout << "Version 0.2.1" << endl;
 	} else {
 		cout << "Error: command not recongized" << endl;
 	}
